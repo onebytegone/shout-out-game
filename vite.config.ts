@@ -3,7 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
    plugins: [ svelte() ],
-   base: process.env.NODE_ENV === 'production' ? '/shout-out/' : '/',
+   base: process.env.NODE_ENV === 'production' ? '/shout-out-game/' : '/',
    build: {
       outDir: 'dist',
       sourcemap: true,
