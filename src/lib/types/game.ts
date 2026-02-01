@@ -13,7 +13,7 @@ export interface GameConfig {
    questions: Question[];
 }
 
-export type GameState = 'config-loading' | 'playing' | 'question-complete' | 'game-complete';
+export type GameState = 'config-loading' | 'config-loaded' | 'playing' | 'question-complete' | 'game-complete';
 
 export interface GameStoreState {
    config: GameConfig | null;
@@ -21,4 +21,7 @@ export interface GameStoreState {
    revealedAnswers: boolean[];
    timerExpired: boolean;
    gameState: GameState;
+   team1Score: number;
+   team2Score: number;
+   currentCounter: number;
 }

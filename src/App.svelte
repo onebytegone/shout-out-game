@@ -1,12 +1,15 @@
 <script lang="ts">
    import { gameStore } from './lib/stores/gameStore';
    import ConfigLoader from './lib/components/ConfigLoader.svelte';
+   import StartGame from './lib/components/StartGame.svelte';
    import GameBoard from './lib/components/GameBoard.svelte';
 </script>
 
 <main>
    {#if $gameStore.gameState === 'config-loading'}
       <ConfigLoader />
+   {:else if $gameStore.gameState === 'config-loaded'}
+      <StartGame />
    {:else}
       <GameBoard />
    {/if}
